@@ -1,5 +1,6 @@
-import { CheckboxElement } from "./CheckboxElement";
+import { RadioElement } from "./RadioElement";
 import { InputElement } from "./InputElement";
+import { CheckboxElement } from "./CheckboxElement";
 
 export const ContactForm = () => {
   return (
@@ -19,14 +20,8 @@ export const ContactForm = () => {
             <InputElement fieldValue="email" label="Email" type="email" />
           </div>
           <fieldset className="flex w-full gap-2">
-            <CheckboxElement
-              fieldValue="choiceInquiry"
-              label="General Inquiry"
-            />
-            <CheckboxElement
-              fieldValue="choiceSupport"
-              label="Support Request"
-            />
+            <RadioElement fieldValue="choiceInquiry" label="General Inquiry" />
+            <RadioElement fieldValue="choiceSupport" label="Support Request" />
           </fieldset>
           <div className="flex flex-col gap-4">
             <label htmlFor="message">Message</label>
@@ -36,9 +31,11 @@ export const ContactForm = () => {
               className="w-full h-28 p-3 rounded shadow-sm border border-gray-300"
             ></textarea>
           </div>
-          <div className="flex w-full gap-8 items-center my-10">
-            <input type="checkbox" />
-            <p>I consent to being contacted by the team.</p>
+          <div className="flex w-full gap-4 items-center my-10">
+            <CheckboxElement
+              fieldValue="consent"
+              label="I consent to being contacted by the team."
+            />
           </div>
           <div className="flex w-full justify-center items-center">
             <button
