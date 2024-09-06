@@ -11,10 +11,12 @@ export const CheckboxElement = ({
     <div className="flex gap-4 w-full">
       <input
         type="checkbox"
-        className="p-2 rounded-md shadow-md border border-gray-300"
+        className="p-2 rounded-md border border-gray-300"
         id={fieldValue}
       />
-      <label htmlFor={fieldValue}>{label}</label>
+      <label htmlFor={fieldValue} className="text-wrap sm:text-nowrap">
+        {label}
+      </label>
     </div>
   );
 };

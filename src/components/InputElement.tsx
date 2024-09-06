@@ -17,6 +17,8 @@ export const InputElement = ({
         type={type}
         placeholder={placeholder}
         className="p-2 rounded-md shadow-md border border-gray-300"
+        id={fieldValue}
+        autoComplete="off"
       />
     </div>
   );
